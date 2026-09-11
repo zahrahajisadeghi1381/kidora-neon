@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تماس با ما | Kidora</title>
+
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            K<span>idora</span>
+        </a>
+
+
+        <input type="checkbox" id="menu-kidora">
+
+
+        <ul class="menu">
+
+            <li>
+                <a href="index.html">
+                    خانه
+                </a>
+            </li>
+
+            <li>
+                <a href="product.html">
+                    محصولات
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    درباره ما
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html" class="active">
+                    تماس با ما
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="auth-links">
+
+            <a href="login.html" class="login-link">
+                ورود
+            </a>
+
+            <a href="register.html" class="register-link">
+                ثبت نام
+            </a>
+
+        </div>
+
+
+        <a href="#" class="contact-btn">
+            شروع خرید از ما
+        </a>
+
+
+        <label for="menu-kidora" class="hamburger">
+
+            <span class="open">☰</span>
+
+            <span class="close">✕</span>
+
+        </label>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="contact-hero">
+
+            <span class="small-title">
+                💜 ارتباط با Kidora
+            </span>
+
+            <h1>
+                با ما در
+                <span>ارتباط</span>
+                باشید
+            </h1>
+
+            <p>
+                سوالی دارید؟ پیشنهادی دارید؟
+                خوشحال می‌شویم از شما بشنویم.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT CONTENT
+        ========================== -->
+
+        <section class="contact-section">
+
+
+            <!-- CONTACT INFO -->
+
+            <div class="contact-info">
+
+                <h2>
+                    راه‌های ارتباطی
+                </h2>
+
+                <p class="info-description">
+                    از طریق روش‌های زیر می‌توانید با ما
+                    در ارتباط باشید.
+                </p>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📧
+                    </div>
+
+                    <div>
+                        <h3>
+                            ایمیل
+                        </h3>
+
+                        <p>
+                            info@kidora.ir
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📱
+                    </div>
+
+                    <div>
+                        <h3>
+                            تلفن
+                        </h3>
+
+                        <p>
+                            ۰۲۱-۱۲۳۴۵۶۷۸
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📍
+                    </div>
+
+                    <div>
+                        <h3>
+                            آدرس
+                        </h3>
+
+                        <p>
+                            تهران، ایران
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="social-box">
+
+                    <h3>
+                        ما را دنبال کنید
+                    </h3>
+
+                    <div class="social-links">
+
+                        <a href="#" title="Instagram">
+                            Instagram
+                        </a>
+
+                        <a href="#" title="Telegram">
+                            Telegram
+                        </a>
+
+                        <a href="#" title="WhatsApp">
+                            WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form-card">
+
+                <h2>
+                    برای ما پیام بفرستید
+                </h2>
+
+                <p>
+                    فرم زیر را تکمیل کنید تا بتوانیم
+                    با شما ارتباط برقرار کنیم.
+                </p>
+
+
+                <form>
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            نام و نام خانوادگی
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="نام خود را وارد کنید"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            ایمیل
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="example@email.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            موضوع
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="موضوع پیام"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            پیام
+                        </label>
+
+                        <textarea
+                            id="message"
+                            placeholder="پیام خود را بنویسید..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="send-btn"
+                    >
+                        ارسال پیام
+                    </button>
+
+
+                    <a
+                        href="index.html"
+                        class="back-home"
+                    >
+                        ← بازگشت به صفحه اصلی
+                    </a>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FAQ
+        ========================== -->
+
+        <section class="faq-section">
+
+            <div class="section-title">
+
+                <span>
+                    سوالات متداول
+                </span>
+
+                <h2>
+                    شاید پاسخ سوال شما اینجا باشد
+                </h2>
+
+            </div>
+
+
+            <div class="faq-grid">
+
+                <div class="faq-card">
+
+                    <h3>
+                        ⏰ چه زمانی پاسخ می‌دهید؟
+                    </h3>
+
+                    <p>
+                        پیام‌های شما در اولین فرصت بررسی
+                        و پاسخ داده خواهند شد.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-card">
+
+                    <h3>
+                        📦 درباره سفارش‌ها سوال دارم
+                    </h3>
+
+                    <p>
+                        می‌توانید شماره سفارش خود را در
+                        پیام برای ما ارسال کنید.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-card">
+
+                    <h3>
+                        💡 پیشنهاد یا انتقاد دارم
+                    </h3>
+
+                    <p>
+                        نظرات شما به ما کمک می‌کند
+                        Kidora را بهتر کنیم.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            K<span>idora</span>
+        </div>
+
+        <p>
+            دنیای دوست‌داشتنی کودکان
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                خانه
+            </a>
+
+            <a href="about.html">
+                درباره ما
+            </a>
+
+            <a href="contact.html">
+                تماس با ما
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Kidora - تمامی حقوق محفوظ است.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

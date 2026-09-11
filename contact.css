@@ -1,0 +1,896 @@
+/* =====================================================
+   KIDORA
+   CONTACT PAGE
+   NEON PURPLE
+===================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Tahoma, Arial, sans-serif;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(168, 85, 247, 0.30),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(217, 70, 239, 0.20),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(126, 34, 206, 0.20),
+            transparent 30%
+        ),
+        #05020b;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 92%;
+    max-width: 1200px;
+
+    position: fixed;
+
+    top: 22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 1000;
+
+    padding: 14px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    background: rgba(18, 7, 32, 0.82);
+
+    border: 1px solid rgba(217, 70, 239, 0.45);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.20);
+}
+
+.logo {
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 8px #d946ef;
+}
+
+.logo span {
+    color: #d946ef;
+
+    text-shadow:
+        0 0 8px #d946ef,
+        0 0 18px #a855f7;
+}
+
+.menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+
+    padding: 10px 13px;
+
+    color: #ddd6fe;
+
+    text-decoration: none;
+
+    border-radius: 11px;
+
+    transition: 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: #ffffff;
+
+    background: rgba(168, 85, 247, 0.16);
+
+    text-shadow:
+        0 0 7px #d946ef;
+}
+
+.auth-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.auth-links a {
+    padding: 9px 14px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.login-link {
+    color: #e9d5ff;
+
+    border: 1px solid rgba(192, 132, 252, 0.5);
+
+    background: rgba(168, 85, 247, 0.08);
+}
+
+.login-link:hover {
+    color: #ffffff;
+
+    background: rgba(168, 85, 247, 0.2);
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.45);
+}
+
+.register-link {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9333ea,
+            #d946ef
+        );
+
+    border: 1px solid #d946ef;
+}
+
+.register-link:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 10px #d946ef,
+        0 0 22px rgba(168, 85, 247, 0.6);
+}
+
+.contact-btn {
+    padding: 10px 16px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7e22ce,
+            #c026d3
+        );
+
+    border: 1px solid #e879f9;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+#menu-kidora {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    border: 1px solid rgba(217,70,239,0.5);
+
+    background: rgba(168,85,247,0.15);
+
+    cursor: pointer;
+
+    font-size: 23px;
+}
+
+.hamburger .close {
+    display: none;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.contact-hero {
+    min-height: 560px;
+
+    padding: 175px 20px 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.contact-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    background: rgba(168, 85, 247, 0.18);
+
+    filter: blur(120px);
+
+    z-index: -1;
+}
+
+.small-title {
+    padding: 8px 17px;
+
+    margin-bottom: 22px;
+
+    color: #f0abfc;
+
+    background: rgba(168,85,247,0.12);
+
+    border: 1px solid rgba(217,70,239,0.35);
+
+    border-radius: 30px;
+
+    font-size: 13px;
+}
+
+.contact-hero h1 {
+    font-size: clamp(35px, 6vw, 58px);
+
+    margin-bottom: 20px;
+}
+
+.contact-hero h1 span {
+    color: #d946ef;
+
+    text-shadow:
+        0 0 8px #d946ef,
+        0 0 22px #a855f7;
+}
+
+.contact-hero p {
+    color: #c4b5fd;
+
+    font-size: 15px;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+.contact-section {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 40px 0 90px;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   CONTACT INFO
+===================================================== */
+
+.contact-info,
+.contact-form-card {
+    padding: 35px;
+
+    background: rgba(20,7,35,0.68);
+
+    border: 1px solid rgba(217,70,239,0.3);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 25px rgba(168,85,247,0.10);
+}
+
+.contact-info h2,
+.contact-form-card h2 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+    color: #f5d0fe;
+
+    text-shadow:
+        0 0 7px #d946ef;
+}
+
+.info-description,
+.contact-form-card > p {
+    color: #a78bfa;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   INFO CARDS
+===================================================== */
+
+.info-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 13px;
+
+    background: rgba(168,85,247,0.07);
+
+    border: 1px solid rgba(192,132,252,0.2);
+
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    border-color: rgba(217,70,239,0.6);
+
+    transform: translateX(-5px);
+
+    box-shadow:
+        0 0 15px rgba(217,70,239,0.18);
+}
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: rgba(168,85,247,0.18);
+
+    font-size: 21px;
+}
+
+.info-card h3 {
+    color: #e879f9;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.info-card p {
+    color: #c4b5fd;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.social-box {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(217,70,239,0.18);
+}
+
+.social-box h3 {
+    color: #e9d5ff;
+
+    font-size: 13px;
+
+    margin-bottom: 14px;
+}
+
+.social-links {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    padding: 8px 12px;
+
+    color: #c4b5fd;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(192,132,252,0.3);
+
+    border-radius: 9px;
+
+    font-size: 10px;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+
+    border-color: #d946ef;
+
+    box-shadow:
+        0 0 10px rgba(217,70,239,0.35);
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #e9d5ff;
+
+    font-size: 12px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid rgba(192,132,252,0.4);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: rgba(8,2,15,0.85);
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    transition: 0.3s ease;
+}
+
+.form-group input {
+    height: 45px;
+
+    padding: 0 14px;
+}
+
+.form-group textarea {
+    min-height: 120px;
+
+    padding: 12px 14px;
+
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #7c3aed;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #d946ef;
+
+    box-shadow:
+        0 0 8px rgba(217,70,239,0.6),
+        0 0 18px rgba(168,85,247,0.25);
+}
+
+
+/* =====================================================
+   SEND BUTTON
+===================================================== */
+
+.send-btn {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #e879f9;
+
+    border-radius: 11px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7e22ce,
+            #a855f7,
+            #d946ef
+        );
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 0 8px rgba(217,70,239,0.55);
+}
+
+.send-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 10px #d946ef,
+        0 0 25px rgba(168,85,247,0.6);
+}
+
+.back-home {
+    display: block;
+
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #c4b5fd;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 8px #d946ef;
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq-section {
+    padding: 70px 20px 100px;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #e879f9;
+
+    font-size: 12px;
+
+    text-shadow:
+        0 0 7px #d946ef;
+}
+
+.section-title h2 {
+    margin-top: 10px;
+
+    font-size: 27px;
+}
+
+.faq-grid {
+    width: 92%;
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 17px;
+}
+
+.faq-card {
+    padding: 25px;
+
+    background: rgba(20,7,35,0.65);
+
+    border: 1px solid rgba(192,132,252,0.25);
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.faq-card:hover {
+    border-color: rgba(217,70,239,0.6);
+
+    box-shadow:
+        0 0 15px rgba(217,70,239,0.2);
+}
+
+.faq-card h3 {
+    color: #f0abfc;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+.faq-card p {
+    color: #a78bfa;
+
+    line-height: 1.9;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    padding: 45px 20px 30px;
+
+    text-align: center;
+
+    background: rgba(10,2,18,0.7);
+
+    border-top: 1px solid rgba(217,70,239,0.18);
+}
+
+.footer-logo {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.footer-logo span {
+    color: #d946ef;
+
+    text-shadow:
+        0 0 8px #d946ef;
+}
+
+.footer > p {
+    color: #a78bfa;
+
+    font-size: 11px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin: 23px 0;
+}
+
+.footer-links a {
+    color: #c4b5fd;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 7px #d946ef;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu,
+    .auth-links,
+    .contact-btn {
+        display: none;
+
+        width: 100%;
+    }
+
+    #menu-kidora:checked ~ .menu {
+        display: flex;
+
+        flex-direction: column;
+
+        margin-top: 10px;
+
+        padding-top: 12px;
+
+        border-top: 1px solid rgba(217,70,239,0.3);
+    }
+
+    #menu-kidora:checked ~ .auth-links {
+        display: flex;
+
+        justify-content: center;
+
+        margin-top: 10px;
+    }
+
+    #menu-kidora:checked ~ .contact-btn {
+        display: block;
+
+        text-align: center;
+
+        margin-top: 8px;
+    }
+
+    #menu-kidora:checked ~ .hamburger .open {
+        display: none;
+    }
+
+    #menu-kidora:checked ~ .hamburger .close {
+        display: inline;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form-card {
+        padding: 25px 20px;
+    }
+
+    .contact-hero h1 {
+        font-size: 38px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .navbar {
+        top: 15px;
+
+        width: 94%;
+    }
+
+    .auth-links {
+        flex-direction: column;
+    }
+
+    .auth-links a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-links a {
+        text-align: center;
+    }
+}

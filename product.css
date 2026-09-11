@@ -1,0 +1,374 @@
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Tahoma, sans-serif;
+    background: #08050f;
+    color: #ffffff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #24143d;
+
+    background: #0b0714;
+    box-shadow: 0 0 20px rgba(170, 0, 255, 0.15);
+}
+
+
+/* Logo */
+
+header h2 {
+    color: #b026ff;
+    text-shadow:
+        0 0 5px #b026ff,
+        0 0 15px #b026ff,
+        0 0 30px #8a2be2;
+}
+
+header h2 span {
+    color: #e100ff;
+    text-shadow:
+        0 0 5px #e100ff,
+        0 0 15px #e100ff;
+}
+
+
+/* Navigation */
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-right: 25px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b026ff;
+
+    text-shadow:
+        0 0 8px #b026ff,
+        0 0 18px #b026ff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1b0b2e 0%,
+            #08050f 55%
+        );
+}
+
+
+/* Hero title */
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.hero h1 span {
+    color: #e100ff;
+
+    text-shadow:
+        0 0 5px #e100ff,
+        0 0 15px #e100ff,
+        0 0 30px #e100ff,
+        0 0 50px #9d00ff;
+}
+
+
+/* Hero paragraph */
+
+.hero p {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #b026ff;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    border: 1px solid #d66aff;
+
+    box-shadow:
+        0 0 10px #b026ff,
+        0 0 25px rgba(176, 38, 255, 0.7);
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #c44dff;
+
+    box-shadow:
+        0 0 10px #b026ff,
+        0 0 25px #b026ff,
+        0 0 45px #b026ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.product {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.product > h2 {
+    margin-bottom: 40px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #b026ff;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Card */
+
+.card {
+    width: 250px;
+
+    background: #110b1c;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #35204d;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: #b026ff;
+
+    box-shadow:
+        0 0 10px rgba(176, 38, 255, 0.7),
+        0 0 25px rgba(176, 38, 255, 0.4);
+}
+
+
+/* =========================
+   ICONS
+========================= */
+
+.icon {
+    font-size: 65px;
+
+    margin-bottom: 20px;
+
+    transition: 0.3s;
+}
+
+
+/* Purple Icon */
+
+.iconpurple {
+    color: #b026ff;
+
+    text-shadow:
+        0 0 5px #b026ff,
+        0 0 15px #b026ff,
+        0 0 30px #b026ff;
+}
+
+
+/* Pink Icon */
+
+.iconpink {
+    color: #e100ff;
+
+    text-shadow:
+        0 0 5px #e100ff,
+        0 0 15px #e100ff,
+        0 0 30px #e100ff;
+}
+
+
+/* Violet Icon */
+
+.iconviolet {
+    color: #8a2be2;
+
+    text-shadow:
+        0 0 5px #8a2be2,
+        0 0 15px #8a2be2,
+        0 0 30px #8a2be2;
+}
+
+
+/* Icon hover */
+
+.card:hover .icon {
+    transform: scale(1.08);
+
+    filter: brightness(1.2);
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #888;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.card strong {
+    display: block;
+
+    color: #c44dff;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 8px rgba(176, 38, 255, 0.8);
+}
+
+
+/* =========================
+   CARD BUTTON
+========================= */
+
+.card button {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #b026ff;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #c44dff;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #b026ff;
+
+    color: white;
+
+    box-shadow:
+        0 0 10px #b026ff,
+        0 0 25px #b026ff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 40px;
+
+    border-top: 1px solid #24143d;
+
+    color: #777;
+
+    background: #09050f;
+}
+
+footer h3 {
+    color: white;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 10px #b026ff;
+}
+
+footer span {
+    color: #c44dff;
+
+    text-shadow:
+        0 0 8px #b026ff;
+}

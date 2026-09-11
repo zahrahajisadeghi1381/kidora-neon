@@ -1,0 +1,1043 @@
+/* =====================================================
+   KIDORA - NEON PURPLE HOME
+===================================================== */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-family: tahoma,arial,sans-serif;
+    background: 
+    radial-gradient(circle at 15% 20%,rgba(168,85,247,0.35),transparent 30%),
+    radial-gradient(circle at 85% 80%,rgba(217,70,239,0.25),transparent 30%),
+    radial-gradient(circle at 50% 50%,rgba(126,34,206,0.12),transparent 45%),
+    #05020b;
+
+    color: #ffffff;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+    width: 92%;
+    max-width: 1200px;
+
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background: rgba(18,7,32,0.78);
+    border: 1px solid rgba(217, 70, 239, 0.45);
+    border-radius: 22px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 
+    0 0 15px rgba(168,85,247,0.25),
+    0 0 40px rgba(126,34,206,0.15);
+    z-index: 1000;
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    text-shadow:
+        0 0 8px rgba(217, 70, 239, 0.8),
+        0 0 20px rgba(168, 85, 247, 0.5);
+
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #d946ef;
+
+    text-shadow:
+        0 0 8px #d946ef,
+        0 0 18px #a855f7;
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+
+    color: #ddd6fe;
+    text-decoration: none;
+
+    padding: 11px 14px;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffffff;
+
+    background: rgba(168, 85, 247, 0.18);
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.25);
+
+    text-shadow:
+        0 0 8px #d946ef;
+}
+
+
+/* =====================================================
+   LOGIN / REGISTER BUTTONS
+===================================================== */
+
+.auth-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.auth-links a {
+    text-decoration: none;
+    padding: 10px 16px;
+
+    border-radius: 11px;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.login-link {
+    color: #e9d5ff;
+
+    border: 1px solid rgba(192, 132, 252, 0.55);
+
+    background: rgba(168, 85, 247, 0.08);
+}
+
+.login-link:hover {
+    color: #ffffff;
+
+    background: rgba(168, 85, 247, 0.2);
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.register-link {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #9333ea,
+        #d946ef
+    );
+
+    border: 1px solid #d946ef;
+
+    box-shadow:
+        0 0 8px rgba(217, 70, 239, 0.5);
+}
+
+.register-link:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 10px #d946ef,
+        0 0 25px rgba(217, 70, 239, 0.6);
+}
+
+
+/* =====================================================
+   CONTACT / START SHOPPING
+===================================================== */
+
+.contact {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    padding: 11px 18px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #7e22ce,
+        #c026d3
+    );
+
+    border: 1px solid rgba(232, 121, 249, 0.7);
+
+    box-shadow:
+        0 0 8px rgba(192, 38, 211, 0.45);
+
+    transition: 0.3s ease;
+
+    white-space: nowrap;
+}
+
+.contact:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 10px #d946ef,
+        0 0 25px rgba(168, 85, 247, 0.55);
+}
+
+
+/* =====================================================
+   MOBILE MENU CHECKBOX
+===================================================== */
+
+#menu-kidora {
+    display: none;
+}
+
+
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+.hamberger {
+    display: none;
+
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(168, 85, 247, 0.18);
+
+    border: 1px solid rgba(217, 70, 239, 0.5);
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.25);
+}
+
+.hamberger .close {
+    display: none;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .hamberger {
+        display: flex;
+    }
+
+    .menu,
+    .contact,
+    .auth-links {
+        display: none;
+        width: 100%;
+    }
+
+
+    #menu-kidora:checked ~ .menu {
+        display: flex;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+
+        margin-top: 12px;
+        padding-top: 12px;
+
+        border-top: 1px solid rgba(217, 70, 239, 0.35);
+
+        animation: showMenu 0.3s ease;
+    }
+
+    #menu-kidora:checked ~ .menu li a {
+        text-align: center;
+    }
+
+
+    #menu-kidora:checked ~ .auth-links {
+        display: flex;
+
+        justify-content: center;
+
+        width: 100%;
+
+        margin-top: 10px;
+    }
+
+
+    #menu-kidora:checked ~ .contact {
+        display: block;
+
+        width: 100%;
+
+        margin-top: 10px;
+
+        text-align: center;
+    }
+
+
+    #menu-kidora:checked ~ .hamberger .open {
+        display: none;
+    }
+
+    #menu-kidora:checked ~ .hamberger .close {
+        display: inline;
+    }
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes showMenu {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        top: 15px;
+        width: 94%;
+        padding: 12px 14px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .auth-links {
+        flex-direction: column;
+    }
+
+    .auth-links a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =====================================================
+   HOME - HERO
+===================================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 140px 8% 80px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(168, 85, 247, 0.18),
+            transparent 45%
+        );
+}
+
+
+.hero h1 {
+    font-size: 48px;
+
+    margin-bottom: 20px;
+
+    line-height: 1.5;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.2);
+}
+
+
+.hero h1 span {
+    color: #d946ef;
+
+    text-shadow:
+        0 0 8px #d946ef,
+        0 0 20px #d946ef,
+        0 0 40px #a855f7;
+}
+
+
+.hero p {
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 25px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #7e22ce,
+        #d946ef
+    );
+
+    border: 1px solid #e879f9;
+
+    box-shadow:
+        0 0 10px rgba(168,85,247,0.6),
+        0 0 25px rgba(217,70,239,0.25);
+
+    transition: 0.3s ease;
+}
+
+
+.btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 12px #d946ef,
+        0 0 30px rgba(217,70,239,0.7),
+        0 0 50px rgba(168,85,247,0.3);
+}
+
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
+
+.categories {
+
+    padding: 80px 8%;
+
+    text-align: center;
+}
+
+
+.categories h2,
+.product h2,
+.features h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px rgba(168,85,247,0.7),
+        0 0 25px rgba(217,70,239,0.25);
+}
+
+
+.section-text {
+
+    color: #888;
+
+    margin-bottom: 40px;
+}
+
+
+/* =====================================================
+   CATEGORY CARDS
+===================================================== */
+
+.category-cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+.category-card {
+
+    width: 240px;
+
+    padding: 30px 20px;
+
+    background: rgba(17,8,29,0.85);
+
+    border: 1px solid rgba(168,85,247,0.35);
+
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+
+.category-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #d946ef;
+
+    box-shadow:
+        0 0 12px rgba(217,70,239,0.6),
+        0 0 30px rgba(168,85,247,0.25);
+}
+
+
+.category-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 20px;
+
+    color: #d946ef;
+
+    text-shadow:
+        0 0 8px #d946ef,
+        0 0 20px #a855f7;
+}
+
+
+.category-card h3 {
+
+    margin-bottom: 12px;
+}
+
+
+.category-card p {
+
+    color: #888;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+.category-card a {
+
+    color: #c084fc;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.category-card a:hover {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #d946ef;
+}
+
+
+/* =====================================================
+   POPULAR PRODUCTS
+===================================================== */
+
+.product {
+
+    padding: 80px 8%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(126,34,206,0.08),
+            transparent
+        );
+}
+
+
+.cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+.card {
+
+    width: 250px;
+
+    padding: 25px;
+
+    background: #11081d;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(168,85,247,0.35);
+
+    transition: 0.3s ease;
+}
+
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #d946ef;
+
+    box-shadow:
+        0 0 12px rgba(217,70,239,0.5),
+        0 0 30px rgba(168,85,247,0.25);
+}
+
+
+.icon {
+
+    font-size: 65px;
+
+    margin-bottom: 20px;
+}
+
+
+.iconpink {
+
+    color: #d946ef;
+
+    text-shadow:
+        0 0 8px #d946ef,
+        0 0 20px #d946ef,
+        0 0 35px #a855f7;
+}
+
+
+.iconpurple {
+
+    color: #a855f7;
+
+    text-shadow:
+        0 0 8px #a855f7,
+        0 0 20px #a855f7,
+        0 0 35px #7e22ce;
+}
+
+
+.iconviolet {
+
+    color: #c026d3;
+
+    text-shadow:
+        0 0 8px #c026d3,
+        0 0 20px #c026d3,
+        0 0 35px #a855f7;
+}
+
+
+.card h3 {
+
+    margin-bottom: 10px;
+}
+
+
+.card p {
+
+    color: #888;
+
+    margin-bottom: 20px;
+
+    line-height: 1.7;
+}
+
+
+.card strong {
+
+    display: block;
+
+    color: #d946ef;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 8px rgba(217,70,239,0.7);
+}
+
+
+.card button {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #d946ef;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #d946ef;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.card button:hover {
+
+    background: #d946ef;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 10px #d946ef,
+        0 0 25px rgba(217,70,239,0.7);
+}
+
+
+/* =====================================================
+   SPECIAL OFFER
+===================================================== */
+
+.offer {
+
+    width: 84%;
+
+    max-width: 1100px;
+
+    margin: 30px auto 80px;
+
+    padding: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(126,34,206,0.25),
+            rgba(217,70,239,0.12)
+        );
+
+    border: 1px solid rgba(217,70,239,0.45);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 0 25px rgba(168,85,247,0.15);
+}
+
+
+.offer-icon {
+
+    font-size: 60px;
+
+    color: #d946ef;
+
+    text-shadow:
+        0 0 10px #d946ef,
+        0 0 25px #a855f7;
+}
+
+
+.offer h2 {
+
+    margin-bottom: 12px;
+
+    color: #ffffff;
+}
+
+
+.offer p {
+
+    color: #999;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features {
+
+    padding: 80px 8%;
+
+    text-align: center;
+}
+
+
+.feature-cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+}
+
+
+.feature {
+
+    width: 220px;
+
+    padding: 25px 20px;
+
+    background: #10071b;
+
+    border: 1px solid rgba(168,85,247,0.3);
+
+    border-radius: 16px;
+
+    transition: 0.3s ease;
+}
+
+
+.feature:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #d946ef;
+
+    box-shadow:
+        0 0 20px rgba(217,70,239,0.25);
+}
+
+
+.feature > i {
+
+    font-size: 40px;
+
+    color: #b026ff;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 8px #b026ff,
+        0 0 20px #d946ef;
+}
+
+
+.feature h3 {
+
+    margin-bottom: 10px;
+}
+
+
+.feature p {
+
+    color: #888;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 45px 20px;
+
+    border-top: 1px solid rgba(168,85,247,0.25);
+
+    background: #07030d;
+
+    color: #777;
+}
+
+
+footer h3 {
+
+    color: #ffffff;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 10px #a855f7;
+}
+
+
+footer h3 span {
+
+    color: #d946ef;
+
+    text-shadow:
+        0 0 8px #d946ef;
+}
+
+
+/* =====================================================
+   RESPONSIVE - HOME
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        min-height: 550px;
+
+        padding: 130px 20px 60px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 34px;
+    }
+
+
+    .hero p {
+
+        font-size: 15px;
+    }
+
+
+    .categories,
+    .product,
+    .features {
+
+        padding: 60px 20px;
+    }
+
+
+    .category-card,
+    .card,
+    .feature {
+
+        width: 100%;
+
+        max-width: 320px;
+    }
+
+
+    .offer {
+
+        width: 90%;
+
+        padding: 35px 20px;
+
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+
+        font-size: 28px;
+    }
+
+
+    .categories h2,
+    .product h2,
+    .features h2 {
+
+        font-size: 25px;
+    }
+
+
+    .btn {
+
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+}
